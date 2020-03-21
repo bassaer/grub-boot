@@ -6,7 +6,7 @@ OBJ = src/boot.o \
 
 .PHONY: install build run clean
 
-all: clean build run
+all: build run
 
 %.o: %.c
 	gcc -c -m32 -Wall -Iinclude -fno-pie -fno-builtin -nostdlib -o $@ $^
