@@ -30,5 +30,8 @@ build: ${ELF}
 run:
 	qemu-system-i386 -name HelloOS -localtime -boot order=d -cdrom $(IMG) || true
 
+screenshot:
+	gnome-screenshot --window --delay=5 -f screenshot.png
+
 clean:
 	rm -rf src/*.o ${ELF} ${IMG} dist
